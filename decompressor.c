@@ -36,3 +36,4 @@ pid_t spawn_decompressor(int* files_num_list, int num_files, int* fd,
 
 	return unzip_pid;
 }
+

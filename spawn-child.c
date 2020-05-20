@@ -70,3 +70,4 @@ int spawn_child(const char* file, char * const* arg, int* fds, uint8_t wants_fds
 		exit(1);
 	}
 }
+

@@ -61,3 +61,4 @@ int enumerate_histfiles(int** history_num_list, const char* history_dir,
 
 	return num_files;
 }
+
