@@ -97,7 +97,6 @@ int main(int argc, char** argv) {
 
 			case 'x':
 				extract_command = optarg;
-				fprintf(stderr, "TODO: implement -x/--extract-command");
 				break;
 
 			case 'h':
