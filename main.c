@@ -102,7 +102,40 @@ int main(int argc, char** argv) {
 			case 'h':
 			case '?':
 			default:
-				fprintf(stderr, "TODO: usage");
+				printf(
+						"Usage: %s [options]\n"
+						"Dump compressed history files to standard output.\n"
+						"\n"
+
+						"  -d, --history-dir <directory>   search for "
+								"history files in directory\n"
+
+						"  -f, --name-format <format>      use format for finding "
+								"history files\n"
+						"                                  (format must have "
+								"exactly one specifier that\n"
+						"                                  corresponds to an int, "
+								"e.g. %%d or %%X\n"
+
+						"  -x, --extract-command <command> use command for extraction "
+								"of content from files\n"
+
+						"  -h, --help                      show this help\n"
+
+						"\n"
+						"\n"
+
+						"the default history dir is the directory part of $HISTFILE,\n"
+						"or, if that doesn't exist, $HOME/.bash_history/\n"
+						"\n"
+
+						"the default name format is history.%%d.xz\n"
+						"\n"
+
+						"the default extraction command is whatever is required for\n"
+						"decompression of known file extensions (xz, gz, lz4 and bz2\n"
+						"are recognized) or cat if there is no known file extension\n"
+						, argv[0]);
 				exit(0);
 				break;
 		}
