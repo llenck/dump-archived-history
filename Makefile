@@ -3,7 +3,7 @@ CFLAGS := -Wall -Wextra -Wpedantic -std=gnu99
 all: release
 
 debug : CFLAGS += -D_BENCHMARK -Werror -Og -g
-release : CFLAGS += -Os -s -no-pie
+release : CFLAGS += -Os -s
 
 debug: dump-archived-history
 release: dump-archived-history
